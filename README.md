@@ -68,12 +68,12 @@ D --> G[Poisson/NB Models]
 
 ---
 
-## ⚙️ Tech Stack
+## ⚙️ Tools & Technologies
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-blue?style=for-the-badge)
 
-![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-orange?style=for-the-badge)
 
-![Kafka](https://img.shields.io/badge/Kafka-000000?style=for-the-badge&logo=apache-kafka)
+![Kafka](https://img.shields.io/badge/Kafka-black?style=for-the-badge)
 
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge)
+![SQL](https://img.shields.io/badge/SQL-green?style=for-the-badge)
