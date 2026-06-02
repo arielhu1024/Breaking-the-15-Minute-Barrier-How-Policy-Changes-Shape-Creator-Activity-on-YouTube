@@ -1,190 +1,150 @@
-<div align="center">
+# Breaking the 15-Minute Barrier: How Policy Changes Shape Creator Activity on YouTube
 
-# 🎬 Breaking the 15-Minute Barrier
+## Overview
 
-### How Policy Changes Shape Creator Activity on YouTube
+This project examines how YouTube's removal of the 15-minute upload limit affected creator behavior. Using large-scale behavioral data collected through the YouTube Data API, Kafka, and PySpark, I constructed a creator-month panel dataset and applied causal inference methods to evaluate the impact of the policy change on content production and engagement.
 
-Research Project • Causal Inference • Data Engineering • Creator Economy
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Kafka-000000?style=for-the-badge&logo=apache-kafka"/>
-<img src="https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apache-spark"/>
-<img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge"/>
-
-</div>
+The project investigates whether platform policy changes affect all creators equally, with particular attention to differences between general creators and professional creators.
 
 ---
 
-## 🎯 Research Question
+## Research Question
 
-How do platform policy changes affect creator behavior?
+The study addresses the following questions:
 
-In December 2010, YouTube removed its long-standing 15-minute upload limit for verified users. While the policy was intended to encourage richer content creation, little is known about how creators with different resources and capabilities adapt to such platform changes.
+1. How did YouTube's removal of the 15-minute upload limit affect creator activity?
 
-This project investigates whether the policy generated different behavioral responses among **general creators** and **professional creators**, and explores how platform design can reshape participation within digital content ecosystems.
+2. Did creators increase or decrease content production following the policy change?
 
----
+3. Were the effects different for general creators and professional creators?
 
-## 📊 Project Snapshot
-
-| Metric | Value |
-|----------|----------|
-| Videos Collected | 1.27M+ |
-| Creators | 494 |
-| Final Videos | 82,664 |
-| Creator-Month Observations | 11,856 |
-| Study Period | Jan 2010 – Dec 2011 |
-| Data Source | YouTube Data API |
+4. What do these findings imply about platform governance and creator ecosystems?
 
 ---
 
-## 🔄 Research Pipeline
+## Dataset
 
-```text
-YouTube API
-      ↓
-Kafka Data Collection
-      ↓
-PySpark ETL Pipeline
-      ↓
-Creator-Month Panel Dataset
-      ↓
-Feature Engineering
-      ↓
-Difference-in-Differences
-Fixed Effects Models
-Poisson / Negative Binomial
-      ↓
-Behavioral Insights
-```
+### Data Collection
+
+Data were collected using the YouTube Data API and processed through a Kafka-PySpark pipeline.
+
+### Sample
+
+- 1.27 million videos collected
+- 494 creators
+- 82,664 videos retained for analysis
+- 11,856 creator-month observations
+
+### Study Period
+
+January 2010 – December 2011
 
 ---
 
-## 👥 Creator Groups
+## Methodology
 
-A key contribution of this project is distinguishing between two creator populations.
+The analysis combines causal inference and panel data methods.
 
-### General Creators
+### Data Engineering
 
-- Random sample of active YouTube creators
-- Limited production resources
-- Primarily individual content producers
-- Represent the broader creator ecosystem
+- YouTube Data API
+- Kafka
+- PySpark
+- SQL
 
-### Professional Creators
-
-- Top-performing YouTube channels during the study period
-- Greater production capacity and audience reach
-- Higher ability to invest in long-form content
-- Represent resource-rich creators
-
-This distinction allows us to examine whether platform policy changes create unequal outcomes across creator groups.
-
----
-
-## 🧠 Methodology
-
-### Causal Inference
+### Statistical Models
 
 - Difference-in-Differences (DID)
 - Event Study Analysis
-
-### Panel Data Models
-
 - Fixed Effects Models
-- Creator Fixed Effects
-- Month Fixed Effects
-
-### Count Data Models
-
 - Poisson Regression
 - Negative Binomial Regression
 
 ---
 
-## 📈 Key Findings
+## Creator Groups
 
 ### General Creators
 
-📉 Monthly uploads decreased significantly after the policy change.
-
-📉 Likes and comments declined substantially.
-
-📉 Overall creator activity became less frequent.
+A random sample of active YouTube creators representing the broader creator ecosystem.
 
 ### Professional Creators
 
-📈 Content production increased significantly.
+Established creators with larger audiences and greater production resources.
 
-📈 Professional creators were more likely to adopt long-form content.
-
-📈 Resource-rich creators benefited more from the new policy environment.
+The comparison between these two groups allows the study to examine heterogeneous responses to platform policy changes.
 
 ---
 
-## 💡 Main Insight
+## Key Findings
 
-The removal of YouTube's upload limit did not affect all creators equally.
+### General Creators
 
-While the policy expanded opportunities for long-form content, creators with greater resources and production capabilities were better positioned to take advantage of the change.
+- Monthly content production decreased after the policy change.
+- Engagement metrics such as likes and comments declined.
+- Long-form content adoption was limited.
 
-These findings suggest that platform design decisions can unintentionally widen disparities between creator groups, producing heterogeneous outcomes across digital ecosystems.
+### Professional Creators
 
----
+- Content production increased significantly.
+- Professional creators adopted long-form content more rapidly.
+- Resource-rich creators benefited more from the policy change.
 
-## ⚙️ Technologies
+### Overall Conclusion
 
-### Data Collection
-
-- YouTube Data API
-- Kafka
-
-### Data Engineering
-
-- PySpark
-- SQL
-
-### Statistical Analysis
-
-- Python
-- Pandas
-- Statsmodels
-
-### Research Methods
-
-- Difference-in-Differences
-- Event Studies
-- Fixed Effects Models
+The policy change generated heterogeneous effects across creator groups. While professional creators expanded production, many general creators reduced activity, suggesting that platform design changes may unintentionally increase disparities within creator ecosystems.
 
 ---
 
-## 👨‍💻 My Contributions
+## Repository Structure
 
-✔ Designed the full data collection pipeline
-
-✔ Collected over 1.27 million video records
-
-✔ Built creator-month panel datasets
-
-✔ Developed automated ETL workflows using Kafka and PySpark
-
-✔ Conducted causal inference analyses
-
-✔ Generated strategic insights on creator behavior and platform governance
+```text
+.
+├── data_collection/
+├── data_processing/
+├── feature_engineering/
+├── analysis/
+├── figures/
+├── results/
+└── README.md
+```
 
 ---
 
-## 📬 Author
+## Running the Project
 
-**Ariel Hu**
+### Requirements
 
-M.S. Business Analytics  
-University of Arizona
+- Python 3.10+
+- Apache Kafka
+- Apache Spark
+- Jupyter Notebook
 
-Research Interests:
+### Installation
 
-- Artificial Intelligence
-- Machine Learning
-- Consumer Behavior
-- Marketing Analytics
-- Digital Platforms
+```bash
+pip install pandas numpy pyspark kafka-python statsmodels
+```
+
+### Running Analysis
+
+```bash
+jupyter notebook
+```
+
+Open the notebooks in the analysis directory and execute the workflow sequentially.
+
+---
+
+## Dependencies
+
+Main packages used in this project:
+
+- pandas
+- numpy
+- pyspark
+- kafka-python
+- statsmodels
+- matplotlib
+
+---
