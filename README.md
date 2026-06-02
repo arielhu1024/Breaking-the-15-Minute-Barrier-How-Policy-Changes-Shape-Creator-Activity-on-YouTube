@@ -99,13 +99,35 @@ The policy change generated heterogeneous effects across creator groups. While p
 
 ```text
 .
-├── data_collection/
-├── data_processing/
-├── feature_engineering/
-├── analysis/
+├── README.md
+│
+├── data/
+│   └── README.md
+│
+├── docs/
+│   └── Conference Paper.pdf
+│
 ├── figures/
+│   ├── study_design.png
+│   ├── event_study_general_creators_views.png
+│   └── event_study_professional_creators.png
+│
+├── notebooks/
+│   ├── 00_environment_setup.ipynb
+│   ├── 01_general_creators_youtube_api_collection.ipynb
+│   ├── 02_general_creators_kafka_pyspark_pipeline.ipynb
+│   ├── 03_general_creators_did_event_study.ipynb
+│   ├── 04_professional_creators_data_collection.ipynb
+│   ├── 05_professional_creators_did_analysis.ipynb
+│   ├── 99_appendix_validation_and_robustness.ipynb
+│   └── README.md
+│
 ├── results/
-└── README.md
+│   ├── did_results_general_creators.csv
+│   ├── did_results_professional_creators.csv
+│   ├── event_study_general_creators.csv
+│   ├── event_study_professional_creators.csv
+│   └── README.md
 ```
 
 ---
