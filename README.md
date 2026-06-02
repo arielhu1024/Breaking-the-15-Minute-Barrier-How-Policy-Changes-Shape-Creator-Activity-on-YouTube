@@ -50,7 +50,6 @@ The analysis combines causal inference and panel data methods.
 - YouTube Data API
 - Kafka
 - PySpark
-- SQL
 
 ### Statistical Models
 
