@@ -45,6 +45,12 @@ January 2010 – December 2011
 
 The analysis combines causal inference and panel data methods.
 
+### Data Construction Pipeline
+
+<p align="center">
+  <img src="figures/study_design.png" width="1000">
+</p>
+
 ### Data Engineering
 
 - YouTube Data API
