@@ -1,0 +1,2 @@
+Outcome,Model,DID_Coefficient,Std_Error,p_value,CI_Lower,CI_Upper
+Monthly Video Count,OLS Fixed Effects,0.2865,0.124,0.022,0.042,0.531
