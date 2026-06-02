@@ -1,2 +1,4 @@
-Outcome,Model,DID_Coefficient,Std_Error,p_value,CI_Lower,CI_Upper
-Monthly Video Count,OLS Fixed Effects,0.2865,0.124,0.022,0.042,0.531
+Outcome,Model,DID_Coefficient,Std_Error,p_value,CI_Lower,CI_Upper,R_squared
+Monthly Video Count,OLS Fixed Effects,0.2865,0.124,0.022,0.042,0.531,0.838
+Monthly Likes,OLS Fixed Effects,0.8199,0.347,0.019,0.138,1.502,0.693
+Monthly Comments,OLS Fixed Effects,0.6123,0.361,0.091,-0.098,1.322,0.897
